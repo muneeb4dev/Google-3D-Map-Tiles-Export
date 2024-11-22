@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Google 3D Map Tiles Exporter</title>
+  <script type="module" crossorigin src="assets/index-pn17fWn_.js"></script>
+  <link rel="stylesheet" crossorigin href="assets/index-D7iLrVcF.css">
+</head>
+
+<body>
+  <div id="app">
+    <div id="top-bar">Google 3D Map Tiles Exporter</div>
+    
+    <div id="container">
+      <div id="form">
+
+        <div id="api-key">
+          <div class="field-label">Google maps API key<span class="required">&nbsp;*</span></div>
+          <input type="text" name="apiKey" required />
+          <div class="message"></div>
+        </div>
+
+        <div id="filename">
+          <div class="field-label">Output file name<span class="required">&nbsp;*</span></div>
+          <input type="text" name="filename" required />
+          <div class="message"></div>
+        </div>
+        
+        <div id="latitude">
+          <div class="field-label">Latitude<span class="required">&nbsp;*</span></div>
+          <input type="text" name="latitude" required />
+          <div class="message">Latitude (required): Enter the latitude in decimal degrees format to fetch the corresponding tiles from Google Maps.</div>
+        </div>
+        
+        <div id="longitude">
+          <div class="field-label">Longitude<span class="required">&nbsp;*</span></div>
+          <input type="text" name="longitude" required />
+          <div class="message">Longitude (required): Enter the longitude in decimal degrees format to fetch the corresponding tiles from Google Maps.</div>
+        </div>
+        
+        <div id="width">
+          <div class="field-label">Viewport width</div>
+          <input type="text" name="width"/>
+          <div class="message">Viewport width (optional): Controls the width of the viewing area. Default value is applied if left empty.</div>
+        </div>
+
+        <div id="height">
+          <div class="field-label">Viewport height</div>
+          <input type="text" name="height" />
+          <div class="message">Viewport height (optional): Controls the height of the viewing area. Default value is applied if left empty.</div>
+        </div>
+        
+        <div id="zoom">
+          <div class="field-label">Zoom</div>
+          <input type="text" name="zoom" />
+          <div class="message">Zoom (optional): Sets the zoom level for the map view. Default value is used if left empty</div>
+        </div>
+        
+        <div id="tiles-limit">
+          <div class="field-label">Tiles limit</div>
+          <input type="text" name="maxTilesLimit" />
+          <div class="message">Max tiles to export (optional): Limits the number of tiles to export. Any tiles beyond this limit will be excluded from the STL output.</div>
+        </div>
+
+        <div id="sse">
+          <div class="field-label">Screen space error</div>
+          <input type="text" name="sse" />
+          <div class="message">Screen space error (optional): Defines the maximum allowed error for tile rendering. A default value is applied if left empty.</div>
+        </div>
+        
+        <div id="btn-container">
+          <div class="progress"></div>
+          <button type="submit" name="submit-btn">Load</button>
+        </div>
+      </div>
+    </div>
+    <a id="file-handle" href="" style="display: none;"></a>
+  </div>
+</body>
+
+</html>
